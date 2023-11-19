@@ -1,9 +1,9 @@
 import {Provider} from 'react-redux';
 import Counter from './src/components/Counter';
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {store} from './src/context/store';
 
-const App = () => {
+const App = (): ReactElement => {
   return (
     <Provider store={store}>
       <Counter />

@@ -1,9 +1,9 @@
 import {View, Text, useColorScheme} from 'react-native';
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {useSelector} from 'react-redux';
 import {RootState} from '../context/store';
 
-const InnerComponent = () => {
+const InnerComponent = (): ReactElement => {
   const count = useSelector((state: RootState) => state.counter.value);
   const isDarkMode = useColorScheme() === 'dark';
   return (
@@ -11,8 +11,9 @@ const InnerComponent = () => {
       style={{
         backgroundColor: isDarkMode ? 'black' : 'white',
         alignItems: 'center',
-        marginTop: 80,
-        height: 100,
+        paddingTop: 90,
+        paddingBottom: 90,
+        height: 200,
         justifyContent: 'center',
       }}>
       <Text

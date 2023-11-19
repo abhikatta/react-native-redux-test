@@ -12,7 +12,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../context/store';
 import {decrement, increment, incrementByValue} from '../context/counterSlice';
 import InnerComponent from './InnerComponent';
-const Counter = () => {
+const Counter = (): React.ReactElement => {
   const count = useSelector((state: RootState) => state.counter.value);
   const [amount, setAmount] = useState<number>(0);
   const dispatch = useDispatch();
